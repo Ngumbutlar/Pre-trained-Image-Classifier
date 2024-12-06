@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:      Labrador_retriever_02.jpg  label:         labrador retriever
+ 2 key:      Labrador_retriever_01.jpg  label:         labrador retriever
+ 3 key:              Coffee_mug_01.jpg  label:                 coffee mug
+ 4 key:            White_rabbit_01.jpg  label:               white rabbit
+Preprocessed tensor shape: torch.Size([3, 224, 224])
+Preprocessed tensor shape: torch.Size([3, 224, 224])
+Preprocessed tensor shape: torch.Size([3, 224, 224])
+Preprocessed tensor shape: torch.Size([3, 224, 224])
+
+     MATCH:
+
+     Labrador_retriever_02.jpg: 
+Real:         labrador retriever   Classifier:             labrador retriever
+
+     Labrador_retriever_01.jpg: 
+Real:         labrador retriever   Classifier:             labrador retriever
+
+ NOT A MATCH:
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                            cup
+
+           White_rabbit_01.jpg: 
+Real:               white rabbit   Classifier:                           hare
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+     Labrador_retriever_02.jpg: 
+Real:         labrador retriever   Classifier:             labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+     Labrador_retriever_01.jpg: 
+Real:         labrador retriever   Classifier:             labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                            cup  
+PetLabelDog: 0  ClassLabelDog: 0
+
+           White_rabbit_01.jpg: 
+Real:               white rabbit   Classifier:                           hare  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+
+Percentage Statistics:
+pct_match           :  50.0
+pct_correct_dogs    : 100.0
+pct_correct_breed   : 100.0
+pct_correct_notdogs : 100.0
+      
+
+** Total Elapsed Runtime: 0:0:3
